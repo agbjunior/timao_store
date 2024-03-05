@@ -1,0 +1,159 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+body{
+    background-color: rgba(2, 2, 2, 0.878);
+}
+
+.container{
+    /*com a margin zerada no topo e embaixo e automatica nas laterais eu centralizo o conteudo na horizontal, estabelecendo o valor maximo de largura 1024px com a largura total da viewport (100%)*/
+    margin: 0 auto;
+    max-width: 1024px;
+    width: 100%;
+}
+
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header{
+    padding: 16px 0;
+    border-bottom: 1px solid #ccc;
+    background-color: rgba(2, 2, 2, 0.938);
+    color: white;
+    font-variant-caps: small-caps;   
+}
+
+h1{
+    font-size: 3em;
+    /*text-shadow: 32px red; DEPOIS VERIFICAR ESSE ELEMENTO*/
+    border-bottom: 8px solid red;
+    margin-left: 16px;
+}
+
+.menu-principal{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    margin-right: 60px;
+}
+
+.menu-secundario{
+    display: none;
+    background-color: red;
+    width: 120px;
+    top: 100%;
+    left: 0;
+}
+
+.menu-principal > li{
+    
+    float: left;
+    list-style: none;
+    padding: 8px;
+    position: relative;
+    cursor: pointer;
+    
+    
+}
+
+.menu-secundario li{
+    /*essa regra permite estilizar todo o li dentro do menu-secundario*/
+    list-style: none;
+    padding: 8px;
+}
+
+a{
+    color: #fff;
+    cursor: pointer;
+    /*pesquisar como tirar o underline do a*/
+}
+.espaco{
+    clear: both;
+}
+
+.menu-principal li:hover .menu-secundario{
+    display: block;
+    position: absolute;
+}
+
+.menu-principal > li:hover{
+    border-top: 1px solid rgb(252, 243, 243);
+    }
+
+img{
+    width: 400px;
+    padding: 32px;
+}
+
+h2{
+    border-top: 3px solid red;
+    padding: 8px;
+    width: 100%;
+    margin-top: 16px;
+    font-size: 1.2em;
+}
+
+.primeira-foto{
+    display: flex;
+}
+
+.ajuste-paragrafo{
+    display: block;
+    max-width: 50%;
+    margin-top: 16px;
+}
+
+.artigos{
+    display: flex;
+    
+}
+
+.artigo img{
+    max-width: 100%;
+    height: 300px;
+    margin-top: 16px;
+
+}
+
+h4{
+    margin-bottom: 8px;
+}
+
+.artigo{
+    text-align: center;
+    
+}
+
+.botao{
+    color: red;
+    padding: 8px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+    .artigos{
+        display: block;
+    }
+
+    .primeira-foto{
+        display: block;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1023px){
+    .artigos{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+}
+
+
+
+
